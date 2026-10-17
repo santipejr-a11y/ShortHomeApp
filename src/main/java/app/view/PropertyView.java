@@ -1,31 +1,32 @@
 package app.view;
 
 import app.service.PropertyOwnerServiceImpl;
+import app.service.inputport.PropertyService;
 
 import java.util.Scanner;
 
 public class PropertyView {
 
-    Scanner sc = new Scanner(System.in);
 
-    private final PropertyOwnerServiceImpl propertyOwnerService;
 
-    PropertyView(PropertyOwnerServiceImpl propertyOwnerServiceImpl){
-        this.propertyOwnerService = propertyOwnerServiceImpl;
+    private final PropertyService propertyService;
+
+    public PropertyView(PropertyService propertyService){
+        this.propertyService = propertyService;
     }
 
 
-    public void createProperty(){
+    public void registerProperty(){
 
         System.out.println("Ingrese el id de la propiedad: ");
 
     }
 
-    public void selectPropertyById(int id){
+    public void showPropertyById(){
 
     }
 
-    public void selectAllProperties(){
+    public void showAllProperties(){
 
     }
 
@@ -33,7 +34,7 @@ public class PropertyView {
 
     }
 
-    public void deleteProperty(int id){
+    public void deleteProperty(){
 
     }
 }

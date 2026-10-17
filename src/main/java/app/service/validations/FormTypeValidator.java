@@ -9,57 +9,51 @@ public class FormTypeValidator {
     static Scanner sc = new Scanner(System.in);
 
 
-    public static int intValidator(String prompt){
-        while(true){
-            try{
-
-                System.out.println(prompt);
-                int value = sc.nextInt();
-                sc.nextLine();
-                return  value;
-
-            }catch (InputMismatchException e){
-                System.out.println("Solo se adminten numeros enteros" + e);
+    public static int intValidator(String prompt) {
+        while (true) {
+            System.out.println(prompt);
+            String value = sc.nextLine().trim();
+            try {
+                return Integer.parseInt(value);
+            } catch (InputMismatchException e) {
+                System.out.println("Solo se adminten numeros enteros" + value + "");
             }
         }
     }
 
-    public static double doubleValidator(String prompt){
-        while(true){
-            try{
+    public static double doubleValidator(String prompt) {
+        while (true) {
+            System.out.println(prompt);
+            String value = sc.nextLine().trim();
+            try {
 
-                System.out.println(prompt);
-                double value = sc.nextDouble();
-                sc.nextLine();
-                return  value;
+                return Double.parseDouble(value);
 
-            }catch (InputMismatchException e){
-                System.out.println("Solo se adminten numeros decimales" + e);
+            } catch (InputMismatchException e) {
+                System.out.println("Solo se adminten numeros decimales" + value + "");
             }
         }
     }
 
-    public static float floatValidator(String prompt){
-        while(true){
-            try{
+    public static float floatValidator(String prompt) {
+        while (true) {
 
-                System.out.println(prompt);
-                float value = sc.nextFloat();
-                sc.nextLine();
-                return  value;
+            System.out.println(prompt);
+            String value = sc.nextLine().trim();
+            try {
 
-            }catch (InputMismatchException e){
-                System.out.println("Solo se adminten numeros decimales" + e);
+                return Float.parseFloat(value);
+
+            } catch (InputMismatchException e) {
+                System.out.println("Solo se adminten numeros decimales" + value + "");
             }
         }
     }
 
 
+    public static String stringValidator(String prompt) {
 
-
-    public static String stringValidator(String prompt){
-
-            while( true){
+        while (true) {
             System.out.println(prompt);
 
             String value = sc.nextLine().trim();
@@ -67,7 +61,7 @@ public class FormTypeValidator {
             if (!value.isEmpty()) {
                 return value;
             }
-                System.out.println( "El valor no puede estar vacio ");
+            System.out.println("El valor no puede estar vacío ");
         }
     }
 }

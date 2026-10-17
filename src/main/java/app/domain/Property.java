@@ -9,6 +9,18 @@ public class Property {
     private PropertyOwner propertyOwner;
     private boolean isAvailable;
 
+    public Property() {
+    }
+
+    public Property(Integer propertyId, String propertyType, String address, String city, PropertyOwner propertyOwner, boolean isAvailable) {
+        this.propertyId = propertyId;
+        this.propertyType = propertyType;
+        this.address = address;
+        this.city = city;
+        this.propertyOwner = propertyOwner;
+        this.isAvailable = isAvailable;
+    }
+
     public Integer getPropertyId() {
         return propertyId;
     }
